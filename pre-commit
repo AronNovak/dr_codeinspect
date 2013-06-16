@@ -21,12 +21,15 @@ foreach ($output as $file) {
   }
 
   $lint_output = array();
-   exec("php -l " . escapeshellarg($file), $lint_output, $return);
-   if ($return == 0) {
-     continue;
-   }
-   echo implode("\n", $lint_output), "\n";
-   $exit_status = 1;
+  $return = 0;
+  if (file_exists($file)) {
+    exec("php -l " . escapeshellarg($file), $lint_output, $return);
+  }
+  if ($return == 0) {
+    continue;
+  }
+  echo implode("\n", $lint_output), "\n";
+  $exit_status = 1;
 }
 
 exit($exit_status);
