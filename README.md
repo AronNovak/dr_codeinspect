@@ -45,3 +45,13 @@ Now make your first inspected commit:
 ```ga whatever.module```
 
 ```gm "whatever: some superb quality code added, nothing more"```
+
+Fine-tuning
+-----------
+If for any reason, you'd not want to break the commit process, merely to print
+out the result of the inspection, in .bashrc, you can change
+export DR_CODEINSPECT_INTERACTIVE=1
+to
+export DR_CODEINSPECT_INTERACTIVE=0
+
+This way, the output of the sniffer is at the stdout and you may review it.

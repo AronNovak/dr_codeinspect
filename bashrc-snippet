@@ -1,4 +1,5 @@
 # GIT helpers from http://www.catonmat.net/blog/git-aliases/ (customized)
+export DR_CODEINSPECT_INTERACTIVE=1
 alias gm=$HOME'/.devtools/drupal-sniff && git commit -m'
 alias ga='git add'
 alias gp='git push'
